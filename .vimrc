@@ -6,3 +6,5 @@ syntax on
 set nobackup
 set nowritebackup
 set noswapfile
+set mouse=a
+au BufNewFile,BufRead *.less set filetype=less
