@@ -107,6 +107,3 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
 fi
 
 source ~/.bash_prompt
-source ~/pnet_env/bin/activate
-
-alias eb="python ~/beanstalk/AWS-ElasticBeanstalk-CLI-2.5.1/eb/linux/python2.7/eb"
