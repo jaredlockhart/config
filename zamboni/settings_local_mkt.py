@@ -98,6 +98,8 @@ APP_PURCHASE_SECRET = 'This secret must match your webpay SECRET'
 # this will be the path to the `stylus` and `lessc` executables.
 STYLUS_BIN = path('node_modules/stylus/bin/stylus')
 LESS_BIN = path('node_modules/less/bin/lessc')
+LESS_LIVE_REFRESH = True
+
 
 # Locally we typically don't run more than 1 elasticsearch node. So we set
 # replicas to zero.
@@ -105,7 +107,7 @@ ES_DEFAULT_NUM_REPLICAS = 0
 
 
 # LESS
-LESS_PREPROCESS = False
+LESS_PREPROCESS = True
 
 # SOLITUDE
 SOLITUDE_HOSTS = [
