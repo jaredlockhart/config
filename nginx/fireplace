@@ -13,6 +13,10 @@ server {
     # 127.0.0.1 in /etc/hosts
     server_name  fireplace;
 
+    location /developers/ {
+        return 301 $scheme://zamboni.jaredkerim.com$request_uri;
+    }
+
     location / {
         # Default to fireplace.
         proxy_pass http://fireplace;
