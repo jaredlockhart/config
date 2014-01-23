@@ -4,7 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 DEBUG_PROPAGATE_EXCEPTIONS = DEBUG
 
-SITE_URL_OVERRIDE = SITE_URL  = 'http://ec2-54-201-226-14.us-west-2.compute.amazonaws.com:8000'
+SITE_URL_OVERRIDE = SITE_URL  = 'http://zamboni.jaredkerim.com'
 MEDIA_URL = '/media/' 
 STATIC_URL = '/'
 
@@ -105,5 +105,5 @@ LESS_PREPROCESS = False
 
 # SOLITUDE
 SOLITUDE_HOSTS = [
-    'http://ec2-54-201-226-14.us-west-2.compute.amazonaws.com:9000'
+    'http://solitude.jaredkerim.com'
 ]
