@@ -1,0 +1,23 @@
+# Change this to reflect where your webpay is running.
+# Optional - only needed if you're testing payments.
+upstream webpay {
+    server localhost:8000;
+}
+
+server {
+
+    # Listening on port 80 is nice but you have to start nginx
+    # with the right permissions.
+    listen       80 default;
+
+    # Set a host name. You also have to alias this host to
+    # 127.0.0.1 in /etc/hosts
+    server_name  webpay;
+
+    location / {
+        # This is an optional alias to your local Webpay server
+        # so you can process payments. The /mozpay/ prefix is what we use in production.
+        proxy_pass http://webpay;
+        proxy_set_header Host $host;
+    }
+}
