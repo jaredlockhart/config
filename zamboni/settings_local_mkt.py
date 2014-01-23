@@ -27,10 +27,14 @@ INSTALLED_APPS += (
 #}
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'zamboni',
+        'BACKEND': 'caching.backends.memcached.MemcachedCache',
+        'LOCATION': ['localhost:11211'],
+        'TIMEOUT': 500,
     }
 }
+
+CACHE_MACHINE_USE_REDIS = True
+REDIS_BACKEND = 'redis://'
 # Caching is required for CSRF to work, please do not use the dummy cache.
 
 DATABASES = {
@@ -94,6 +98,8 @@ APP_PURCHASE_SECRET = 'This secret must match your webpay SECRET'
 # this will be the path to the `stylus` and `lessc` executables.
 STYLUS_BIN = path('node_modules/stylus/bin/stylus')
 LESS_BIN = path('node_modules/less/bin/lessc')
+LESS_LIVE_REFRESH = True
+
 
 # Locally we typically don't run more than 1 elasticsearch node. So we set
 # replicas to zero.
@@ -101,7 +107,7 @@ ES_DEFAULT_NUM_REPLICAS = 0
 
 
 # LESS
-LESS_PREPROCESS = False
+LESS_PREPROCESS = True
 
 # SOLITUDE
 SOLITUDE_HOSTS = [
