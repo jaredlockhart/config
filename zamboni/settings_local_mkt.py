@@ -89,10 +89,10 @@ WEBAPPS_RECEIPT_KEY = os.path.join(ROOT, 'mkt/webapps/tests/sample.key')
 ALLOW_SELF_REVIEWS = True
 
 # For Marketplace payments.
-APP_PURCHASE_KEY = 'localhost'
-APP_PURCHASE_AUD = 'localhost'
+APP_PURCHASE_KEY = 'webpay.jaredkerim.com'
+APP_PURCHASE_AUD = 'webpay.jaredkerim.com'
 APP_PURCHASE_TYP = 'mozilla-local/payments/pay/v1'
-APP_PURCHASE_SECRET = 'This secret must match your webpay SECRET'
+APP_PURCHASE_SECRET = 'some_secret-key'
 
 # Assuming you did `npm install` (and not `-g`) like you were supposed to,
 # this will be the path to the `stylus` and `lessc` executables.
