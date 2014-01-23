@@ -27,8 +27,9 @@ INSTALLED_APPS += (
 #}
 CACHES = {
     'default': {
-        'BACKEND': 'django.core.cache.backends.locmem.LocMemCache',
-        'LOCATION': 'zamboni',
+        'BACKEND': 'caching.backends.memcached.MemcachedCache',
+        'LOCATION': ['localhost:11211'],
+        'TIMEOUT': 500,
     }
 }
 # Caching is required for CSRF to work, please do not use the dummy cache.
