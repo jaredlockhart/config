@@ -52,6 +52,7 @@ DEV = True
 # By default, BrowserID expects your app to use http://127.0.0.1:8000
 # Uncomment the following line if you prefer to access your app via localhost
 SITE_URL = 'http://webpay.jaredkerim.com'
+DOMAIN = 'webpay.jaredkerim.com'
 
 # Playdoh ships with Bcrypt+HMAC by default because it's the most secure.
 # To use bcrypt, fill in a secret HMAC key. It cannot be blank. Date is
@@ -116,12 +117,12 @@ MARKETPLACE_URL = 'http://zamboni.jaredkerim.com'
 #FAKE_PAYMENTS = True
 
 # Set up your local webpay for payments against a B2G device.
-#DOMAIN = 'localhost'  # JWT aud
-#KEY = DOMAIN  # JWT iss
-#SECRET = 'this must match APP_PURCHASE_SECRET in zamboni'
+DOMAIN = 'webpay.jaredkerim.com'  # JWT aud
+KEY = DOMAIN  # JWT iss
+SECRET = 'some_secret-key'
 
 # Add the single page app for local dev.
 ENABLE_SPA = False
 
 VERBOSE_LOGGING = True
-TEST_PIN_UI = False
+TEST_PIN_UI = True
