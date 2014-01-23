@@ -32,6 +32,9 @@ CACHES = {
         'TIMEOUT': 500,
     }
 }
+
+CACHE_MACHINE_USE_REDIS = True
+REDIS_BACKEND = 'redis://'
 # Caching is required for CSRF to work, please do not use the dummy cache.
 
 DATABASES = {
