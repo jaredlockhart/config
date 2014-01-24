@@ -3,3 +3,5 @@
 	email = jared.l.kerim@gmail.com
 [color]
 	ui = true
+[core]
+	editor = vim
