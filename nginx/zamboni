@@ -20,6 +20,6 @@ server {
     }
 
     location /media/ {
-        root /home/ubuntu/zamboni;
+        alias /home/ubuntu/zamboni/media/;
     }
 }

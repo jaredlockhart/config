@@ -20,4 +20,8 @@ server {
         proxy_pass http://webpay;
         proxy_set_header Host $host;
     }
+
+    location /mozpay/media/ {
+        alias /home/ubuntu/webpay/media/;
+    }
 }
