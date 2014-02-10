@@ -17,6 +17,9 @@ server {
         # Default to fireplace.
         proxy_pass http://zamboni;
         proxy_set_header Host $host;
+        
+        auth_basic "Restricted";
+        auth_basic_user_file /home/ubuntu/config/nginx/.htpasswd;
     }
 
     location /media/ {

@@ -113,3 +113,9 @@ LESS_PREPROCESS = True
 SOLITUDE_HOSTS = [
     'http://solitude.jaredkerim.com'
 ]
+
+AWS_ACCESS_KEY_ID = 'AKIAILSKLJNQHPAJHTEA'
+AWS_SECRET_ACCESS_KEY = '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'
+S3_BUCKET_ID = 's3.jaredkerim.com'
+
+SENTRY_DSN = 'https://0c7330432f3042b787760a6a2c83be7e:35276a2dcd664125b82b73fe3a6a3298@app.getsentry.com/18513'
