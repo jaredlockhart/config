@@ -4,6 +4,7 @@ DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 DEBUG_PROPAGATE_EXCEPTIONS = DEBUG
 
+#SITE_URL_OVERRIDE = SITE_URL  = 'http://zamboni.jaredkerim.com'
 SITE_URL_OVERRIDE = SITE_URL  = 'http://zamboni.jaredkerim.com'
 MEDIA_URL = '/media/' 
 STATIC_URL = '/'
@@ -14,6 +15,7 @@ INSTALLED_APPS += (
     'django_extensions',
     'fixture_magic',
     'django_qunit',
+    'kombu.transport.django',
 )
 
 # You want one of the caching backends.  Dummy won't do any caching, locmem is
@@ -92,7 +94,7 @@ ALLOW_SELF_REVIEWS = True
 APP_PURCHASE_KEY = 'webpay.jaredkerim.com'
 APP_PURCHASE_AUD = 'webpay.jaredkerim.com'
 APP_PURCHASE_TYP = 'mozilla-local/payments/pay/v1'
-APP_PURCHASE_SECRET = 'some_secret-key'
+APP_PURCHASE_SECRET = 'some-secret-key'
 
 # Assuming you did `npm install` (and not `-g`) like you were supposed to,
 # this will be the path to the `stylus` and `lessc` executables.
@@ -119,3 +121,17 @@ AWS_SECRET_ACCESS_KEY = 'uP69tO+z6qMxRtgQzjf4aAiTnBmPi2uRuDYtcYc+'
 S3_BUCKET_ID = 's3.jaredkerim.com'
 
 SENTRY_DSN = 'https://0c7330432f3042b787760a6a2c83be7e:35276a2dcd664125b82b73fe3a6a3298@app.getsentry.com/18513'
+
+BROKER_URL = 'django://'
+
+# A list of the payment providers supported by the marketplace. Currently there
+# can be only one value, however we expect this to change in the future.
+PAYMENT_PROVIDERS = ['bango', 'boku']#, 'boku']
+
+# When True, pre-generate APKs for apps.
+PRE_GENERATE_APKS = False
+
+# The origin URL for our Fireplace frontend, from which API requests come.
+FIREPLACE_URL = 'http://fireplace.jaredkerim.com'
+
+QUNIT_TEST_DIRECTORY = ''

@@ -9,3 +9,4 @@ set noswapfile
 set mouse=a
 au BufNewFile,BufRead *.less set filetype=less
 set tabpagemax=50
+autocmd BufWritePre *.py :%s/\s\+$//e

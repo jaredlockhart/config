@@ -112,17 +112,23 @@ SESSION_COOKIE_SECURE = False
 SOLITUDE_URL = 'http://solitude.jaredkerim.com'
 MARKETPLACE_URL = 'http://zamboni.jaredkerim.com'
 
-# If you want to test the pay flow without making a real Bango
-# payment, set this to True.
-#FAKE_PAYMENTS = True
-
 # Set up your local webpay for payments against a B2G device.
 DOMAIN = 'webpay.jaredkerim.com'  # JWT aud
 KEY = DOMAIN  # JWT iss
-SECRET = 'some_secret-key'
+SECRET = 'some-secret-key'
 
 # Add the single page app for local dev.
 ENABLE_SPA = False
 
 VERBOSE_LOGGING = True
 TEST_PIN_UI = True
+
+base.JS_SETTINGS['zamboni_raven_url'] = 'http://none@zamboni.jaredkerim.com/api/v1/fireplace/report_error/18513'
+
+CACHE_PREFIX = 'webpay'
+
+# When not None, this is a dict of mcc and mnc to simulate a specific mobile
+# network. This overrides the client side network detection.
+# Example: {'mcc': '123', 'mnc': '45'}
+# Use this setting carefully!
+SIMULATED_NETWORK = {'mcc': '334', 'mnc': '020'}
