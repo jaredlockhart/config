@@ -80,7 +80,7 @@ STATSD_CLIENT = 'django_statsd.clients.null'
 #ZIPPY_MOCK = True
 ZIPPY_CONFIGURATION = {
     'reference': {
-        'url': 'https://zippy.paas.allizom.org',  # No trailing slash.
+        'url': 'http://zippy.jaredkerim.com',  # No trailing slash.
         'auth': {
             'key': 'dpf43f3p2l4k3l03',
             'secret': 'kd94hf93k423kf44',
@@ -103,6 +103,29 @@ ZIPPY_CONFIGURATION = {
 #    'handlers': ['console'],
 #    'level': 'DEBUG',
 #}
+
+console =  {
+    'handlers': ['console'],
+    'level': 'DEBUG',
+}
+
+LOGGING = {
+    'version': 1,
+    'handlers': {
+        'console':{
+            'level': 'DEBUG',
+            'class': 'logging.StreamHandler',
+        }
+    },
+    'loggers': {
+        'django.request.tastypie': console,
+        'django_browserid': console,
+        'statsd': console,
+        #'suds': console,
+    },
+}
+
+
 AES_KEYS = {
     'buyerpaypal:key': 'buyerpaypal_key.key',
     'sellerpaypal:id': 'sellerpaypal_id.key',
@@ -121,3 +144,11 @@ BANGO_AUTH = {
 
 BANGO_NOTIFICATION_URL = SITE_URL + 'notification' 
 
+BOKU_SECRET_KEY = 'zlGCFG3uGIMbZIy9f5garR3PZfLsX1hlKg4rC4ukFNuvNdcDlVWBeqZeIBVyVWRtJDyWsmOkFC5jkwWAwc2ndKNB19D3BokbETs7'
+BOKU_MERCHANT_ID = 'mozilla-devs'
+
+NOSE_ARGS = [
+    #'--with-progressive',
+    '--with-blockage',
+    '--nologcapture',
+]
