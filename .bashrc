@@ -106,5 +106,7 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+export PYTHONDONTWRITEBYTECODE=1
+
 source ~/.bash_prompt
 echo -ne "\033]0;$HOSTNAME\007"
