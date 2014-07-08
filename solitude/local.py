@@ -128,6 +128,7 @@ LOGGING = {
 
 AES_KEYS = {
     'buyerpaypal:key': 'buyerpaypal_key.key',
+    'buyeremail:key': 'buyeremail_key.key',
     'sellerpaypal:id': 'sellerpaypal_id.key',
     'sellerpaypal:token': 'sellerpaypal_token.key',
     'sellerpaypal:secret': 'sellerpaypal_secret.key',
