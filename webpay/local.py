@@ -131,4 +131,4 @@ CACHE_PREFIX = 'webpay'
 # network. This overrides the client side network detection.
 # Example: {'mcc': '123', 'mnc': '45'}
 # Use this setting carefully!
-SIMULATED_NETWORK = {'mcc': '334', 'mnc': '020'}
+SIMULATED_NETWORK = None #{'mcc': '334', 'mnc': '020'}
