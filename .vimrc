@@ -1,8 +1,10 @@
+set ruler
 set nu
 set ts=2
 set sw=2
 set autoindent
 set expandtab
+set autoread
 syntax on
 set nobackup
 set nowritebackup
@@ -12,3 +14,4 @@ au BufNewFile,BufRead *.less set filetype=less
 set tabpagemax=50
 autocmd BufWritePre *.py :%s/\s\+$//e
 autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufRead,BufNewFile *.jsm set filetype=javascript
