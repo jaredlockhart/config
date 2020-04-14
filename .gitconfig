@@ -1,8 +1,8 @@
 [user]
-	name = Jared Lockhart
-	email = 119884+jaredlockhart@users.noreply.github.com
+  name = Jared Lockhart
+  email = 119884+jaredlockhart@users.noreply.github.com
 [color]
-	ui = true
+  ui = true
 [core]
 	editor = vim
 	excludesfile = ~/.gitignore_global
