@@ -5,4 +5,4 @@
   ui = true
 [core]
   editor = vim
-	excludesfile = /Users/jaredlockhart/.gitignore
+	excludesfile = ~/.gitignore_global

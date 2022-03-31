@@ -12,6 +12,5 @@ set noswapfile
 set mouse=a
 au BufNewFile,BufRead *.less set filetype=less
 set tabpagemax=50
-autocmd BufWritePre *.py :%s/\s\+$//e
-autocmd BufWritePre *.js :%s/\s\+$//e
+autocmd BufWritePre *.* :%s/\s\+$//e
 autocmd BufRead,BufNewFile *.jsm set filetype=javascript
