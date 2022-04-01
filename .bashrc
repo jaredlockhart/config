@@ -114,10 +114,11 @@ echo -ne "\033]0;$HOSTNAME\007"
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
-# Add pyenv initializer to shell startup script.
-eval "$(pyenv init -)"
-
 # Add poetry to your shell
 export PATH="$HOME/.poetry/bin:$PATH"
 echo 'export PATH="/usr/local/opt/llvm/bin:$PATH"' >> ~/.bash_profile
 export LIBRARY_PATH=$LIBRARY_PATH:/usr/local/opt/openssl/lib/
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
